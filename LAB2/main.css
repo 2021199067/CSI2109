@@ -1,0 +1,50 @@
+body{
+    background-color:blanchedalmond;
+    font-size: 11pt; 
+    font-family:'Courier New', Courier, monospace
+}
+input {
+    background-color: bisque;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11pt;
+    border-width: 0 0 2px;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 14pt;
+    margin:0%;
+    color: darksalmon;
+    font-weight:normal;
+}
+div {
+    width: 200px;
+    height: 400px;
+    border: 0.5px solid gray;
+    background-color: bisque;
+    padding: 8px;
+}
+table {
+    font-size: 15pt;
+    width: 300px;
+    background-color: bisque;
+    border-collapse: collapse;
+    text-align: center;
+    margin:auto;
+}
+th, td {
+    padding: 4px;
+    border: 0.5px solid black;
+}
+#extra {
+    color: dimgray;
+}
+#extra input {
+    border-color: gray;
+    color: dimgray;
+}
+#button {
+    background-color: darksalmon;
+    border-width: 1px 1px 1px;
+}
