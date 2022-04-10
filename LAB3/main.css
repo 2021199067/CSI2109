@@ -1,0 +1,140 @@
+body {
+    font-family: "futura-pt", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    width: 95%;
+    max-width: 1020px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.header {
+    position: relative;
+    animation-name: slidein;
+    animation-duration: 2s;
+    animation-delay: 0.3s;
+}
+
+@keyframes slidein {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+h2 {
+    font-size: 1.2em;
+    color: coral;
+    font-weight: normal;
+}
+
+p {
+    margin: 7px;
+}
+
+span {
+    color: dimgray;
+}
+
+.center {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid dimgray;
+    background-color: blanchedalmond;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    color: black;
+    text-align: center;
+    padding-inline: 5px;
+    text-decoration: none;
+}
+
+li a.active {
+    color: darksalmon;
+}
+
+li a:hover {
+    background-color: floralwhite;
+}
+
+input {
+    box-sizing: border-box;
+    background-color: inherit;
+    font-family: inherit;
+    color: dimgray;
+    border-width: 0 0 1px;
+    width: 100%;
+}
+
+.button {
+    height: auto;
+    width: auto;
+    color: black;
+    font-size: 1em;
+    border-width: 1px 1px 1px;
+    background-color: darksalmon;
+}
+
+table {
+    width: 300px;
+    background-color: blanchedalmond;
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto;
+}
+
+th,
+td {
+    padding: 4px;
+    border: 0.5px solid black;
+}
+
+.container {
+    text-align: center;
+}
+
+.product {
+    width: 270px;
+    height: 320px;
+    margin: 10px;
+    padding: 10px;
+    background-color: floralwhite;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.product:hover {
+    background-color: blanchedalmond;
+}
+
+.product img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 2s;
+}
+
+.product:hover img.rotate {
+    transform: rotate(360deg);
+}
+
+.product:hover img.enlarge {
+    transform: scale(1.9);
+}

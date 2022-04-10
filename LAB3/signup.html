@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sign-up Page</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+	<h1>Farmer'S Market</h1>
+	<ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Log in</a></li>
+        <li><a href="signup.html" class="active">Signup</a></li>
+    </ul><br>
+    
+	<form action="customerinfo" autocomplete="on" method="get">
+		<div>
+			<label for="nm">First Name</label><br>
+			<input type="text" name="name" placeholder="이름" required autofocus/><br><br>
+
+			<label for="nm">Last Name</label><br>
+			<input type="text" name="name" placeholder="성" required /><br><br>
+
+			<label for="phn">Phone #</label><br>
+			<input type="tel" name="phone" placeholder="010-1234-5678" pattern="\d{3}-\d{4}-\d{4}" required /><br><br>
+
+			<label for="id">ID</label><br>
+			<input type="text" name="id" placeholder="아이디" required/><br><br>
+
+			<label for="pw">PW</label><br>
+			<input type="password" name="password" placeholder="패스워드" id="pw" required /><br><br>
+
+			<label> Email</label><br>
+			<input type="email" name="email" placeholder="name@domain.com" required /><br><br>
+		<br>
+			<h2>Additional Information:</h2>
+			<label for="bd">Date of Birth</label><br>
+			<input type="date" name="birthday"><br><br>
+
+			<label> Country/Region</label><br>
+			<input type="radio" name="country" value="korea" class="button"> <span>Korea</span> <br>
+			<input type="radio" name="country" value="other" class="button"> <span>Other...</span>
+			<input type="text" name="specify" value=""><br><br>
+
+			<label> Desired Delivery Time <br>(every 30 minutes from 9:00 AM ~ 11:00 PM) </label><br>
+			<input type="time" min="07:00" max="23:00" step="1800"> <br>
+		</div><br>
+		<div class="center">
+			<input type="submit" value="Signup" class="button">
+			<input type="reset" value="Cancel" class="button">	
+		</div>
+		</form>
+</body>
+
+</html>
