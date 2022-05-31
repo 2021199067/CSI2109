@@ -3,19 +3,11 @@ body {
     width: 95%;
     max-width: 1020px;
     margin: auto;
-<<<<<<< HEAD
-    overflow: hidden;
-    text-transform: uppercase;
-}
-
-html {overflow-x: hidden; overflow-y: overlay}
-=======
     overflow:hidden;
     text-transform: uppercase;
 }
 
 html {overflow-x: hidden;}
->>>>>>> f78521af595b7006bbb25112d5dd5a49d4f0b9ba
 
 h1 {
     font-size: 2em;
@@ -77,11 +69,7 @@ th, td {
 ul.navbar {
     list-style-type: none;
     margin: 0px;
-<<<<<<< HEAD
-    padding: 0px 1px;
-=======
     padding: 0;
->>>>>>> f78521af595b7006bbb25112d5dd5a49d4f0b9ba
     text-transform: uppercase;
 }
 
@@ -103,19 +91,17 @@ ul.navbar {
     align-items: stretch;
 }
 
+.Searchbox {
+    margin: auto;
+    padding: 20px;
+    
+}
 .product-container {
-<<<<<<< HEAD
-    box-sizing: border-box;
-=======
->>>>>>> f78521af595b7006bbb25112d5dd5a49d4f0b9ba
-    text-align: center;
     flex-basis: 60%;
     max-width: 60%;
+    text-align: center;
     gap: 20px;
-<<<<<<< HEAD
-    padding: 0px 1px;
-=======
->>>>>>> f78521af595b7006bbb25112d5dd5a49d4f0b9ba
+    justify-content: center;
 }
 
 .banners {
@@ -179,7 +165,7 @@ div.product-image img {
         flex-direction: column;
         row-gap: 20px;
     }
-    .product-container, .banners {
+    .Main, .product-container, .banners {
         flex-basis: 100%;
         max-width: 100%;
         justify-content: center;
@@ -193,7 +179,7 @@ div.product-image img {
     .navbar a{
         text-align: center;
     }
-    .product-container, .banners {
+    .Main, .product-container, .banners {
         flex-basis: 100%;
         max-width: 100%;
     }
@@ -209,11 +195,6 @@ h2, .navbar a.active {color: coral;}
 table, .navbar, .product-card:hover {background-color: blanchedalmond;}
 li a:hover, .product-card {background-color: floralwhite;}
 .info-card {background-color: beige;}
-<<<<<<< HEAD
-table, .navbar, .info-card,
-.info-card img, .info-card div {border: 1px solid dimgray;}
-.product-card:hover, .product-card:hover img {outline: 1px solid dimgray;}
-=======
-table, .navbar, .product-card:hover, .product-card img, .info-card,
+table, .navbar, .product-card, 
+.product-card img, .info-card, .info-card img, 
 .info-card div {border: 1px solid dimgray;}
->>>>>>> f78521af595b7006bbb25112d5dd5a49d4f0b9ba

@@ -1,0 +1,40 @@
+{
+    "products": [
+        {
+            "name": "Raw Whole Milk (1L)",
+            "price": 5.0,
+            "image": ".jpg",
+            "category": "Dairy"
+        }, 
+        {
+            "name": "Chicken Eggs (12)",
+            "price": 3.0,
+            "image": ".jpg",
+            "category": "Dairy"
+        }, 
+        {
+            "name": "Peanut Butter (250g)",
+            "price": 15.0,
+            "image": "peanutbutter.jpg",
+            "category": "Jam & Spreads"
+        }, 
+        {
+            "name": "Swiss Cheese (340g)",
+            "price": 7.0,
+            "image": "cheese.jpg",
+            "category": "Dairy"
+        }, 
+        {
+            "name": "Purple Cabbage",
+            "price": 6.0,
+            "image": "cabbage.jpg",
+            "category": "Vegetables"
+        }, 
+        {
+            "name": "Cranberries (150g)",
+            "price": 8.0,
+            "image": "cranberry.jpg",
+            "category": "Fruits"
+        }
+    ]  
+}

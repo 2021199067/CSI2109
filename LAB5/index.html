@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOME</title>
+    <link rel='stylesheet' type='text/css' href='main.css'>
+</head>
+
+<body>
+    <div class="header"> 
+        <h1>Uncle Ben's Farm</h1>
+    </div>
+    <ul class="navbar">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="login.html">Log in</a></li>
+        <li><a href="signup.html">Signup</a></li>
+    </ul>
+    <script>
+        let Allproducts = [];
+        fetch("products.json")
+        .then(response => response.json())
+        .then(Allproducts => getAllProducts(Allproducts)) 
+
+        function getAllProducts(Allproducts) {
+            Allproducts.forEach(product=> getOneProduct(product))
+        }
+        const cards = document.querySelector(".page-content")
+        function getOneProduct(product) {
+            const card = document.createElement("div")
+            card.className = "product-container"
+            card.innerHTML = '\
+                <div class = "product-card">\
+                    <span class="price">${product.category}</span>\
+                    <div class="product-image">\
+                    <img src= "${product.image}" alt="${product.name}"/>\
+                    </div>\
+                    <div class="product-info">\
+                    <p class="product-name">${product.name}</p>\
+                    <span class="price">$${product.price}</span>\
+                    </div>\
+                </div>\
+            '
+            cards.append(card)
+        }
+        
+        var filterCate = function(data, cate) {
+            var result = [];
+            var products = data.products;
+        }
+    
+    </script>
+    <div class=page-content>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="milk.jpg" alt="Milk" class="rotate">
+                </div>
+                <div class="product-info">
+                    <p class="product-name">Raw Whole Milk (1L)</p>
+                    <span class="price">$5</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="eggs.jpg" alt="Eggs" class="rotate">
+                </div>
+                <div class="product-info">
+                    <p class="product-name">Chicken Eggs (12)</p>
+                    <span class="price">$3</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="peanutbutter.jpg" alt="Peanut Butter" class="enlarge">
+                </div>
+                <div class="product-info">
+                    <p class="product-name"> Peanut Butter (250g)</p>
+                    <span class="price">$15</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="cheese.jpg" alt="Cheese" class="enlarge">
+                </div>
+                <div class="product-info">
+                    <p class="product-name">Swiss Cheese (340g)</p>
+                    <span class="price">$7</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="cabbage.jpg" alt="Cabbage" class="rotate">
+                </div>
+                <div class="product-info">
+                    <p class="product-name">Purple Cabbage</p>
+                    <span class="price">$6</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="cranberry.jpg" alt="Cranberries" class="rotate">
+                </div>
+                <div class="product-info">
+                    <p class="product-name">Cranberries (150g)</p>
+                    <span class="price">$8</span>
+                </div>
+            </div>
+        </div>
+        <div class="banners">
+            <form class="Searchbox">
+                <div>
+                    <label for="searchct">Search by category: </label>
+                    <select id="searchct">
+                        <option>All</option>
+                        <option>Dairy</option>
+                        <option>Jams & Spreads</option>
+                        <option>Fruits</option>
+                        <option>Vegetables</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="searchkw">Search by keyword: </label>
+                    <input type="text" id="searchkw" placeholder="Cheese">
+                </div> <br>
+                <div class="center">
+                    <input type="submit" value="Search" class="button"/>
+                </div>
+            </form> <br>
+            <div class="info-card"> 
+                <p>Meet Uncle Ben</p>
+                <img src="farmer.jpg" alt="Uncle Ben">
+                <div>
+                    Howdy, folks! Welcome to Uncle Ben's farm shop. <br>
+                    All items fresh & well-packed. It ain't much, but
+                    it's honest work. Thank ya kindly for paying a visit. 
+                </div>
+            </div>
+            <div class="info-card"> 
+                <p>Our Favorite Recipes </p>
+                <img src="sugaredcranberries.jpg" alt="Sugared Cranberries">
+                <div>
+                    Sugared cranberries are the simplest, yet the <br>
+                    most delicious treat for winter! <br>
+                    It only requires three ingredients: <br>
+                    <ul>
+                        <li>1/2 cup sugar</li>
+                        <li>1/2 cup water</li>
+                        <li>1 cup fresh Uncle Ben's cranberries </li>
+                    </ul> 
+                    In order to make sugared cranberries, first simmer 
+                    water and sugar in a saucepan for 3 minutes. Next, add the cranberries 
+                    in and stir for a minute. Finally, roll
+                    the cranberries in dry sugar to coat. Voila! Now you have
+                    a perfect dessert for Christmas dinner.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
