@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOME</title>
+    <link rel='stylesheet' type='text/css' href='/main.css'>
+</head>
+
+<body>
+    <div class="header"> 
+        <h1>Uncle Ben's Farm</h1>
+    </div>
+    <ul class="navbar">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/login">Log in</a></li>
+        <li><a href="/signup">Signup</a></li>
+    </ul>
+    
+    <div class="page-content">
+        <div class="product-container">
+            <% products.forEach((product) => { %>
+                <div class="product-card" id="<%=product.pro_id%>" onclick="location.href='/product/<%=product.pro_id%>'">
+                    <div class="product-image">
+                        <img src="/<%= product.pro_img %>" alt="Product Key Photo"/>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name"><%=product.pro_title%></p>
+                        <span class="price">$<%=product.pro_price%></span>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+        <div class="banners">
+            <div class = "Searchbox">
+                <form action="/search" method="POST" class="filter-products">
+                    <div>
+                        <label for="searchct">Search by category: </label>
+                        <select id="searchct" name="searchct">
+                            <option>All</option>
+                            <option>Dairy</option>
+                            <option>Jams & Spreads</option>
+                            <option>Fruits</option>
+                            <option>Vegetables</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="searchkw">Search by keyword: </label>
+                        <input type="text" id="searchkw" class="searchkw" name="searchkw" placeholder="Cheese">
+                    </div> <br>
+                    <div class="center">
+                        <input type="submit" value="Search" class="button" id="submit"/>
+                    </div>
+                </form> <br>
+            </div>
+            <div class="info-card"> 
+                <p>Meet Uncle Ben</p>
+                <img src="/farmer.jpg" alt="Uncle Ben">
+                <div>
+                    Howdy, folks! Welcome to Uncle Ben's farm shop. <br>
+                    All items fresh & well-packed. It ain't much, but
+                    it's honest work. Thank ya kindly for paying a visit. 
+                </div>
+            </div>
+            <div class="info-card"> 
+                <p>Our Favorite Recipes </p>
+                <img src="/sugaredcranberries.jpg" alt="Sugared Cranberries">
+                <div>
+                    Sugared cranberries are the simplest, yet the <br>
+                    most delicious treat for winter! <br>
+                    It only requires three ingredients: <br>
+                    <ul>
+                        <li>1/2 cup sugar</li>
+                        <li>1/2 cup water</li>
+                        <li>1 cup fresh Uncle Ben's cranberries </li>
+                    </ul> 
+                    In order to make sugared cranberries, first simmer 
+                    water and sugar in a saucepan for 3 minutes. Next, add the cranberries 
+                    in and stir for a minute. Finally, roll
+                    the cranberries in dry sugar to coat. Voila! Now you have
+                    a perfect dessert for Christmas dinner.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
